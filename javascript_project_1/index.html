@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/output.css" />
+    <title>Document</title>
+  </head>
+  <body
+    class="bg-gradient-to-br from-purple-700 to-indigo-900 text-white h-screen flex justify-center items-center flex-col"
+  >
+    <h1 class="mb-10 text-4xl text-black font-bold">Password Generator</h1>
+    <div
+      class=" container w-[60%] h-auto p-6 rounded-2xl mt-2 bg-gradient-to-r from-purple-600 to-pink-500"
+    >
+      <h2
+        class="rounded bg-amber-50 text-black font-semibold text-center p-1.5 mb-2"
+      >
+        Click on the Generate button
+      </h2>
+      <label class="font-semibold" for="range" id="length">Length : 10</label> <br />
+      <div class="bg-amber-50 p-1.5 rounded text-black mt-2 mb-2">
+        <span class="mr-0.5">4</span>
+        <input
+          class="w-[90%] bg-amber-50"
+          type="range"
+          min="4"
+          max="50"
+          value="10"
+          name="range"
+          id="range"
+        /><span class="ml-1">50</span><br />
+      </div>
+      <label class="font-semibold" for="checkbox">Setting</label><br />
+
+      <div class="bg-gray-200 h-10 font-semibold p-1.5 rounded text-black mt-2">
+        <label class="cursor-pointer flex justify-between items-center w-full">
+          Include Lowercase
+          <input type="checkbox" class="sr-only peer box_check" id="lowercase"/>
+          <div
+            class="relative w-9 h-5 bg-blue-300 peer-focus:outline-none peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"
+          ></div> </label
+        ><br />
+      </div>
+
+      <div class="bg-gray-200 h-10 font-semibold p-1.5 rounded text-black mt-2">
+        <label class="cursor-pointer flex justify-between items-center w-full">
+          Include Uppercase
+          <input type="checkbox" class="sr-only peer box_check" id="uppercase"/>
+          <div
+            class="relative w-9 h-5 bg-blue-300 peer-focus:outline-none peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"
+          ></div> </label
+        ><br />
+      </div>
+
+      <div class="bg-gray-200 h-10 font-semibold p-1.5 rounded text-black mt-2">
+        <label class="cursor-pointer flex justify-between items-center w-full">
+          Include Number
+          <input type="checkbox" value="" class="sr-only peer box_check" id="number" />
+          <div
+            class="relative w-9 h-5 bg-blue-300 peer-focus:outline-none peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"
+          ></div> </label
+        ><br />
+      </div>
+
+      <div class="bg-gray-200 h-10 font-semibold p-1.5 rounded text-black mt-2">
+        <label class="cursor-pointer flex justify-between items-center w-full">
+          Include Symbol
+          <input type="checkbox" value="" class="sr-only peer box_check" id="symbol" />
+          <div
+            class="relative w-9 h-5 bg-blue-300 peer-focus:outline-none peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"
+          ></div> </label
+        ><br />
+      </div>
+
+      <input
+        class="bg-gray-200 p-1.5 cursor-pointer rounded font-semibold text-black mt-2 mb-2 w-full"
+        type="button"
+        value="GENERATE PASSWORD"
+        id="gen_password"
+      />
+      <h3 class="font-semibold hidden"  id="result">Result</h3>
+      <p id="result_type"
+        class="bg-gray-200 p-1.5 hidden rounded font-semibold text-black mt-2 text-center h-auto"
+      >
+        Result Here
+      </p>
+
+      <p id="copy"
+        class="bg-gray-200 p-1.5 hidden rounded font-semibold text-black mt-2 text-center"
+      >
+        Copy Password
+      </p>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
